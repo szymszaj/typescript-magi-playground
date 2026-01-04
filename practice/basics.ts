@@ -10,13 +10,18 @@ interface User {
   id: number;
   username: string;
   email: string;
-  isActive?: boolean;
+  name: string;
+  role: "admin" | "editor" | "viewer";
+  isActive: boolean;
 }
 
 const newUser: User = {
   id: 1,
   username: "magic_coder",
   email: "magic@example.com",
+  name: "test1",
+  role: "admin",
+  isActive: true,
 };
 
 function formatUser(user: User): string {
